@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B8FFA8E-D310-4E39-8E74-A8F227EF2777}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SaleManagement</RootNamespace>
+    <AssemblyName>SaleManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store.Designer.cs">
+      <DependentUpon>Store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportRequest.Designer.cs">
+      <DependentUpon>ImportRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportRequestDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportRequestDetail.Designer.cs">
+      <DependentUpon>ImportRequestDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Introduce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Introduce.Designer.cs">
+      <DependentUpon>Introduce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSerial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductSerial.Designer.cs">
+      <DependentUpon>ProductSerial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sign-in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign-in.Designer.cs">
+      <DependentUpon>Sign-in.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Statistical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistical.Designer.cs">
+      <DependentUpon>Statistical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store.resx">
+      <DependentUpon>Store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportRequest.resx">
+      <DependentUpon>ImportRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportRequestDetail.resx">
+      <DependentUpon>ImportRequestDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Introduce.resx">
+      <DependentUpon>Introduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetail.resx">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductSerial.resx">
+      <DependentUpon>ProductSerial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sign-in.resx">
+      <DependentUpon>Sign-in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistical.resx">
+      <DependentUpon>Statistical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BAL\BAL.csproj">
+      <Project>{0b94e118-3cbb-4dac-be81-5f30fc5089ad}</Project>
+      <Name>BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BEL\BEL.csproj">
+      <Project>{f9083a36-6c24-4e61-89e0-8163b0315acb}</Project>
+      <Name>BEL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhan-vien-ban-hang-1024x671.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screen Shot 2018-12-26 at 7.52.27 AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-delivery %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best-price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best-price %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-delivery %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6f9089e3-6856-4081-9992-397f6ec41351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
